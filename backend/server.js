@@ -20,7 +20,7 @@ const inventory = [
     { id: 10, productName: "Water Bottle", category: "Fitness", price: 20, supplier: "FitGear" }
 ];
 
-app.get('/search', (req, res) => {
+app.get(['/search', '/api/search'], (req, res) => {
     let results = [...inventory];
     const { q, category, minPrice, maxPrice } = req.query;
 
@@ -34,7 +34,7 @@ app.get('/search', (req, res) => {
         );
     }
 
-    if (category && category !== "All") {
+    if (category && category !== "All" && category.toLowerCase() !== "all") {
         results = results.filter(item => 
             item.category.toLowerCase() === category.toLowerCase()
         );
@@ -51,6 +51,12 @@ app.get('/search', (req, res) => {
     res.json(results);
 });
 
-app.listen(PORT, () => {
-    console.log(`Server is running at http://localhost:${PORT}`);
-});
+// Start the server (Only run if not on Vercel)
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => {
+        console.log(`Server is running at http://localhost:${PORT}`);
+    });
+}
+
+// Export for Vercel Serverless
+module.exports = app;

@@ -5,7 +5,11 @@ async function searchInventory() {
     const maxPrice = document.getElementById('maxPrice').value;
 
     // Build the URL with query parameters
-    const url = `http://localhost:3000/search?q=${q}&category=${category}&minPrice=${minPrice}&maxPrice=${maxPrice}`;
+    const queryParams = `?q=${q}&category=${category}&minPrice=${minPrice}&maxPrice=${maxPrice}`;
+    
+    // Determine the base URL based on if we are running locally or deployed on Vercel
+    const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.protocol === 'file:';
+    const url = isLocalhost ? `http://localhost:3000/search${queryParams}` : `/api/search${queryParams}`;
 
     try {
         const response = await fetch(url);
