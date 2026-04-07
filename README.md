@@ -32,7 +32,7 @@
   * Price > 0
 * Group inventory by supplier with total value
 
----
+
 
 ## 📸 Screenshots
 
