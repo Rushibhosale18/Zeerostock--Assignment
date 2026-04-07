@@ -49,7 +49,7 @@
 ### 1. Clone Repository
 
 
-git clone https://github.com/your-username/your-repo-name.git
+git clone https:(https://github.com/Rushibhosale18/Zeerostock--Assignment/blob/main/README.md)
 
 cd your-repo-name
 ```
