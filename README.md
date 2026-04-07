@@ -52,7 +52,7 @@
 git clone https:(https://github.com/Rushibhosale18/Zeerostock--Assignment/blob/main/README.md)
 
 cd your-repo-name
-```
+
 
 ### 2. Run Backend
 
