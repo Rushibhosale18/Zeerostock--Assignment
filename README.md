@@ -36,38 +36,33 @@
 
 ## 📸 Screenshots
 
-### 🔍 Inventory Search UI
+<img width="1920" height="1080" alt="Screenshot (56)" src="https://github.com/user-attachments/assets/3ca77d7c-d40f-4eb1-b4ff-8ec34f3da854" />
 
-![Uploading Screenshot (56).png…]()
+<img width="1920" height="1080" alt="Screenshot (57)" src="https://github.com/user-attachments/assets/6338485e-849c-43aa-9d20-04d5b8525a88" />
 
+<img width="1920" height="1080" alt="Screenshot (58)" src="https://github.com/user-attachments/assets/9f8f1eee-2d91-4793-af96-f0ba73272c49" />
 
-### 📊 Filtered Results
-
-![Uploading Screenshot (58).png…]()
-
-
-
-### 🔧 API Testing (Postman)
-
-![Uploading Screenshot (57).png…]()
 
 
 ## ▶️ How to Run Locally
 
 ### 1. Clone Repository
 
-```bash
+
 git clone https://github.com/your-username/your-repo-name.git
+
 cd your-repo-name
 ```
 
 ### 2. Run Backend
 
-```bash
+
 cd backend
+
 npm install
+
 node server.js
-```
+
 
 ### 3. Run Frontend
 
